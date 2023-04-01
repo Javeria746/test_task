@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import Swal from 'sweetalert2';
+
 declare var window:any;
 @Component({
   selector: 'app-contact-list',
@@ -31,7 +31,6 @@ if(localdata != null){
 }
 }
 openmodal(){
-
 this.formModal.show();
 this.contact = {
   contactID:0,
