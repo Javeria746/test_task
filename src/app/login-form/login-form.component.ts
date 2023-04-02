@@ -43,7 +43,7 @@ if(isUserExist != undefined){
   this.router.navigate(['/contact-list']);
 }
 else {
-  alert('user not logged in')
+  alert('Wrong Credentials, please try again')
 }
 }
 }

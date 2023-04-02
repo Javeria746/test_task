@@ -25,6 +25,7 @@ constructor(private toast:ToastrService){
 ngOnInit(): void {
   this.btn='Save';
 this.formModal = new window.bootstrap.Modal(document.getElementById("exampleModal"))
+//getting list of contacts from local storage
 const localdata = localStorage.getItem('contactList');
 if(localdata != null){
   this.contactList = JSON.parse(localdata);
@@ -44,9 +45,8 @@ this.contact = {
 closeModal(){
 this.formModal.hide();
 }
+//Add and update data
 saveData(data:any){
-  debugger;
-
   if(this.btn=='Save'){
     this.contact.contactID = this.contactList.length+1;
     this.contactList.push(this.contact);
@@ -85,6 +85,7 @@ onEdit(contact:any){
 
 
 }
+//delete record
 onDelete(id:any){
   for (let i =0; i < this.contactList.length; i++){
     if(this.contactList[i].contactID == id){
